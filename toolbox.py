@@ -77,3 +77,15 @@ def divisors(n):
             divisorList.append(i)
             divisorList.append(int(n/i))
     return list(set(divisorList) - {n})
+
+def collatzStep(n):
+    if n % 2 == 0:
+        return n / 2
+    else:
+        return (3 * n) + 1
+
+def collatzSequence(n):
+    seq = [n]
+    while seq[-1] != 1:
+        seq.append(collatzStep(seq[-1]))
+    return seq
