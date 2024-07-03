@@ -31,3 +31,11 @@ def isStringPalendrome(S):
 
 def isIntPalendrome(I):
     return isStringPalendrome(str(I))
+
+#standard summation results:
+
+def sumOfFirstN(n):
+    return (n * (n+1))/2
+
+def sumOfFirstNSquared(n):
+    return (n * (n + 1) * ((2 * n) + 1))/6
