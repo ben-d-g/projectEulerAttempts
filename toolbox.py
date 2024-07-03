@@ -69,3 +69,11 @@ def primesUnder(n):
             primes.append(candidate)
         candidate += 2
     return primes
+
+def divisors(n):
+    divisorList = []
+    for i in range(1, int(math.sqrt(n) + 1)):
+        if n % i == 0:
+            divisorList.append(i)
+            divisorList.append(int(n/i))
+    return list(set(divisorList) - {n})
