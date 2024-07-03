@@ -51,3 +51,21 @@ def isPrime(n):
         if n % i == 0:
             return False
     return True
+
+def firstNPrimes(n):
+    primes = [2, 3]
+    candidate = primes[-1] + 2
+    while len(primes) + 1 <= n:
+        if isPrime(candidate):
+            primes.append(candidate)
+        candidate += 2
+    return primes
+
+def primesUnder(n):
+    primes = [2, 3]
+    candidate = primes[-1] + 2
+    while candidate <= n:
+        if isPrime(candidate):
+            primes.append(candidate)
+        candidate += 2
+    return primes
