@@ -89,3 +89,9 @@ def collatzSequence(n):
     while seq[-1] != 1:
         seq.append(collatzStep(seq[-1]))
     return seq
+
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * factorial(n - 1)
